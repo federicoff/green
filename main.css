@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap);
 .clock {
   width: 100%;
 }
@@ -3654,7 +3655,7 @@
   position: relative;
 }
 .guy-reminder .ball>.message {
-  padding: 5px;
+  padding: 5px 10px;
   font-size: 25px;
   background-color: #fff;
   color: #333;
@@ -3666,28 +3667,23 @@
   left: -270px;
   width: 300px;
   height: 180px;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .temperature {
   background-color: #99f;
   border-radius: 10px;
-  padding: 5px;
-  position: relative;
+  padding: 2px;
+  display: flex;
 }
 .temperature .weather-icon {
   font-size: 100px;
-  text-shadow: 0 0 0.5em #fff;
-  animation-duration: 20s;
-}
-.temperature .weather-icon.fa-sun {
-  color: #ff6;
 }
 .temperature .temp {
-  position: absolute;
-  left: 5px;
-  top: 5px;
   font-size: 40px;
+}
+.temperature .other {
+  color: #333;
 }
 
 html,
@@ -3698,6 +3694,7 @@ body {
   padding: 0;
 }
 .endava-green-comms {
+  font-family: 'Roboto Condensed', sans-serif;
   position: relative;
   background: #333;
   height: 100%;
@@ -3721,55 +3718,68 @@ body {
 .endava-green-comms > .egc-content iframe {
   border-radius: 15px;
 }
-.endava-green-comms > .egc-content .egc-content-info {
+.endava-green-comms > .egc-content > .egc-content-info {
   position: absolute;
   left: 10px;
   top: 10px;
   opacity: 0.9;
+  color: #de411b;
 }
-.endava-green-comms > .egc-content .egc-content-info .egc-content-title {
+.endava-green-comms > .egc-content > .egc-content-info .egc-content-title {
   font-size: 60px;
-  text-shadow: 0.075em 0.1em 0.3em #000;
-  background-color: #1a1a1a;
+  background-color: #fff;
   padding-left: 10px;
   padding-right: 30px;
   border-top-left-radius: 15px;
   border-bottom-right-radius: 15px;
   margin-bottom: 4px;
+  border: 1px dotted rgba(0,0,0,0.2);
 }
-.endava-green-comms > .egc-content .egc-content-info .calendar {
-  background-color: #1a1a1a;
+.endava-green-comms > .egc-content > .egc-content-info .calendar {
+  background-color: #fff;
   font-size: 40px;
   padding-left: 10px;
   padding-right: 30px;
   display: inline-block;
   border-bottom-right-radius: 15px;
   margin-bottom: 4px;
+  border: 1px dotted rgba(0,0,0,0.2);
 }
-.endava-green-comms > .egc-content .egc-content-info .calendar .ffo-icon {
-  margin-right: 5px;
+.endava-green-comms > .egc-content > .egc-content-info .calendar .ffo-icon {
+  margin-right: 8px;
 }
-.endava-green-comms > .egc-content .egc-content-info .egc-qrcode {
+.endava-green-comms > .egc-content > .egc-content-info .egc-qrcode {
   display: block;
 }
 .endava-green-comms > .info {
-  text-shadow: 0.075em 0.1em 0.3em #000;
-  background-color: #333;
-  min-width: 220px;
-  height: 180px;
-  border: 4px solid #1a1a1a;
+  opacity: 0.9;
   position: absolute;
   top: 20px;
   right: 20px;
   border-radius: 10px;
   padding: 4px;
+  background-color: #fff;
 }
-.endava-green-comms > .info .clock {
-  color: #e6e6e6;
-  font-size: 65px;
+.endava-green-comms > .info>.clock {
+  color: #1a1a1a;
+  font-size: 70px;
   text-align: center;
+  background: transparent;
 }
-.endava-green-comms .media-container {
+.endava-green-comms > .info>.clock>.time {
+  line-height: 80px;
+}
+.endava-green-comms > .info>.clock>.date>.month,
+.endava-green-comms > .info>.clock>.date>.date {
+  border: none;
+  border-radius: 10px;
+  background-color: #de411b;
+  color: #fff;
+}
+.endava-green-comms > .info>.temperature {
+  width: 250px;
+}
+.endava-green-comms>.egc-content>.media-container {
   padding-top: 10px;
   height: calc(100% - 20px);
   width: 100%;
@@ -3778,19 +3788,37 @@ body {
   align-content: center;
   justify-content: center;
 }
-.endava-green-comms .media-container video {
+.endava-green-comms>.egc-content>.media-container video {
   height: 100%;
   border-radius: 10px;
 }
-.endava-green-comms .media-container iframe {
+.endava-green-comms>.egc-content>.media-container iframe {
   width: 100%;
   height: 100%;
 }
-.endava-green-comms .media-container img {
+.endava-green-comms>.egc-content>.media-container img {
   height: 100%;
   display: block;
   margin: 0 auto;
   border-radius: 25px;
+}
+.endava-green-comms>.info>.temperature {
+  border: 2px solid #f3af9f;
+  background-color: #fff;
+}
+.endava-green-comms>.info>.temperature .icon-container>img {
+  width: 60px;
+  height: 60px;
+}
+.endava-green-comms>.info>.temperature .icon-container .ffo-icon {
+  color: #ff0;
+}
+.endava-green-comms>.info>.temperature .temp {
+  color: #000;
+}
+.endava-green-comms>.info>.temperature .other {
+  flex: 1;
+  padding-left: 10px;
 }
 .fade-enter-active,
 .fade-leave-active {
