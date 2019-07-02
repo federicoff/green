@@ -3666,8 +3666,12 @@
   top: -180px;
   left: -270px;
   width: 300px;
-  height: 180px;
+  height: 195px;
   opacity: 0.9;
+}
+.guy-reminder .ball>.message>img.qr {
+  width: 100px;
+  height: 100px;
 }
 
 .temperature {
@@ -3717,6 +3721,28 @@ body {
 }
 .endava-green-comms > .egc-content iframe {
   border-radius: 15px;
+}
+.teams-link>.reactions {
+  margin-top: 4px;
+  display: flex;
+}
+.teams-link>.reactions .reaction {
+  width: 30px;
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  overflow: hidden;
+}
+.teams-link>.reactions .reaction>.emoji,
+.teams-link>.reactions .reaction>.count {
+  text-align: center;
+  width: 30px;
+  background-color: #fff;
+}
+.teams-link>.reactions .reaction+.reaction {
+  margin-left: 2px;
 }
 .endava-green-comms > .egc-content > .egc-content-info {
   position: absolute;
@@ -3844,5 +3870,3 @@ body {
   text-align: center;
 }
 
-
-/*# sourceMappingURL=main.css.map*/
