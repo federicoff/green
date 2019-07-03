@@ -3696,20 +3696,20 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 .endava-green-comms {
   font-family: 'Roboto Condensed', sans-serif;
   position: relative;
-  background: #333;
+  background: #000;
   height: 100%;
   padding: 15px;
 }
 .endava-green-comms .egc-content {
   border: 1px solid #808080;
   height: 100%;
-  background-color: #e6e6e6;
   border-radius: 15px;
-  padding: 20px;
+  padding: 10px;
 }
 .endava-green-comms > .guy-reminder {
   position: absolute;
@@ -3727,7 +3727,8 @@ body {
   display: flex;
 }
 .teams-link>.reactions .reaction {
-  width: 30px;
+  width: 35px;
+  font-size: 18px;
   display: flex;
   justify-items: center;
   flex-direction: column;
@@ -3738,7 +3739,7 @@ body {
 .teams-link>.reactions .reaction>.emoji,
 .teams-link>.reactions .reaction>.count {
   text-align: center;
-  width: 30px;
+  width: 35px;
   background-color: #fff;
 }
 .teams-link>.reactions .reaction+.reaction {
@@ -3760,6 +3761,23 @@ body {
   border-bottom-right-radius: 15px;
   margin-bottom: 4px;
   border: 1px dotted rgba(0,0,0,0.2);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.endava-green-comms > .egc-content > .egc-content-info .egc-content-title.transparent {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+.endava-green-comms > .egc-content > .egc-content-info .egc-content-title.transparent>* {
+  text-shadow: 2px 2px 2px #000;
+}
+.endava-green-comms > .egc-content > .egc-content-info .egc-content-title.transparent>img {
+  width: 100px;
+  height: 100px;
+  margin-right: 5px;
+}
+.endava-green-comms > .egc-content > .egc-content-info .egc-content-title.transparent .endava {
+  color: #fff;
 }
 .endava-green-comms > .egc-content > .egc-content-info .calendar {
   background-color: #fff;
@@ -3770,12 +3788,33 @@ body {
   border-bottom-right-radius: 15px;
   margin-bottom: 4px;
   border: 1px dotted rgba(0,0,0,0.2);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 .endava-green-comms > .egc-content > .egc-content-info .calendar .ffo-icon {
   margin-right: 8px;
 }
 .endava-green-comms > .egc-content > .egc-content-info .egc-qrcode {
   display: block;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.endava-green-comms > .egc-content > .egc-content-info .reaction {
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.location {
+  position: absolute;
+  bottom: 15px;
+  display: inline-block;
+  font-size: 40px;
+  padding-left: 10px;
+  border-bottom-right-radius: 15px;
+  padding-right: 30px;
+  text-shadow: 2px 2px 2px #000;
+}
+.location .ffo-icon {
+  color: #de411b;
+  font-size: 45px;
+  line-height: 56px;
+  margin-right: 10px;
 }
 .endava-green-comms > .info {
   opacity: 0.9;
@@ -3815,7 +3854,8 @@ body {
   justify-content: center;
 }
 .endava-green-comms>.egc-content>.media-container video {
-  height: 100%;
+  width: 100%;
+  object-fit: cover;
   border-radius: 10px;
 }
 .endava-green-comms>.egc-content>.media-container iframe {
