@@ -3690,6 +3690,9 @@
   color: #333;
 }
 
+.punch-viewer-nav-v2.punch-viewer-nav-fixed {
+  display: none;
+}
 html,
 body {
   height: 100%;
@@ -3697,6 +3700,47 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+.controls {
+  display: inline-block;
+  position: absolute;
+  bottom: 5px;
+  right: 150px;
+  padding: 2px;
+  background: #000;
+}
+.controls span {
+  font-size: 10px;
+  margin: 0 3px;
+  color: #b3b3b3;
+}
+.controls button {
+  border: 1px dotted #fff;
+  color: #fff;
+  background: transparent;
+  margin-right: 2px;
+  opacity: 0.5;
+}
+.iframe-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.iframe-container .border-fix {
+  top: 0;
+  left: 20px;
+  position: absolute;
+  opacity: 0.6;
+  width: calc(100% - 40px);
+  height: calc(100% - 30px);
+  box-shadow: inset 0px 0px 10px 14px rgba(0,0,0,0.93);
+}
+.iframe-container .bottom-fix {
+  position: absolute;
+  bottom: 0;
+  background-color: #000;
+  width: 100%;
+  height: 30px;
 }
 .endava-green-comms {
   font-family: 'Roboto Condensed', sans-serif;
